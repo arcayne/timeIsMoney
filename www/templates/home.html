@@ -1,15 +1,14 @@
-    <ion-content ng-controller="HomeCtrl" background-color="#464A48" align:center >
-        <div class="row" height="80%">
-
-            <div class="col" border="1" border-color="blue">
+    <ion-content ng-controller="HomeCtrl" >
+        <div class="row row-top" >
+            <div class="col" id="money">
                 <section align="center">
-                    <h1 style="color:#ffffff"> {{time}} €</h1>
+                    <h1> {{time}} €</h1>
                 </section>
             </div>
         </div>
 
-        <div class="row bar-footer" background-color="#464A48" bottom="0px">
-            <div class="list col col-50">
+        <div class="row bar-footer">
+            <div class="list col">
 
                 <div class="range">
                     <i class="icon ion-person"></i>
@@ -17,17 +16,17 @@
                     <i class="icon ion-person-stalker"></i>
                 </div>
             </div>
-            <div class="col col-10" align="left" >
-                <label align="center" style="color:#ffffff"> {{people}} </label>
+            <div class="col col-10" >
+                <label align="center"> {{people}} </label>
             </div>
-            <div class="col col-13" align="right" >
+            <div class="col col-10">
                 <label ng-click="start()" ng-hide="Counting" class="button icon ion-ios7-play-outline"></label>
                 <label ng-click="pause()" ng-show="Counting" class="button icon ion-ios7-pause-outline"></label>
             </div>
-            <div class="col col-13" align="right">
+            <div class="col col-10">
                 <label ng-click="reset()" class="button icon ion-ios7-refresh-empty"></label>
             </div>
-            <div class="col col-13" align="right">
+            <div class="col col-10">
                 <label ng-click="setUp()" class="button icon ion-gear-a"></label>
             </div>
         </div>
