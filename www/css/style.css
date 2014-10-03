@@ -1,1 +1,16 @@
-/* Empty. Add your own CSS if you like */
+h1, span, label
+{
+    color: #fff;
+}
+
+#money h1
+{
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(256, 256, 256, 0.75);
+    -moz-box-shadow:    0px 0px 10px 0px rgba(256, 256, 256, 0.75);
+    box-shadow:         0px 0px 10px 0px rgba(256, 256, 256, 0.75);
+    /*background-color: #639DBC;*/
+    background-color: #0050EF;
+    margin: 30px;
+    /*border: 1px;
+    border-color: blue;*/
+}
