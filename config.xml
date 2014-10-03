@@ -13,8 +13,8 @@
       Ionic Framework Team
     </author>
 
-  <!--<content src="index.html"/>-->
-  <!--<access origin="*"/>-->
+  <content src="index.html"/>
+  <access origin="*"/>
 
   <preference name="phonegap-version" value="3.5.0" />
   <preference name="webviewbounce" value="false"/>
