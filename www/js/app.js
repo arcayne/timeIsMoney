@@ -34,6 +34,13 @@ angular.module('timeIsMoney', ['ionic'])
 
         })
 
+//        .state('settings',{
+//            url:'/settings',
+//            templateUrl: 'templates/settings.html',
+//            controller:'HomeCtrl'
+//
+//        })
+
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('home');
 

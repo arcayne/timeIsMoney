@@ -7350,7 +7350,7 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
 /* across the grid. However, you can specify individual */
 /* columns to take up a certain size of the available area */
 .col-10 {
-  -webkit-box-flex: 0;
+  -webkit-box-flex: 2;
   -webkit-flex: 0 0 10%;
   -moz-box-flex: 0;
   -moz-flex: 0 0 10%;

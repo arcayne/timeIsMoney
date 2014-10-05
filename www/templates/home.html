@@ -2,18 +2,17 @@
         <div class="row row-top" >
             <div class="col" id="money">
                 <section align="center">
-                    <h1> {{time}} €</h1>
+                    <h1> {{time}} {{currency}}</h1>
                 </section>
             </div>
         </div>
-
         <div class="row bar-footer">
             <div class="list col">
 
                 <div class="range">
-                    <i class="icon ion-ios7-person-outline"></i>
+                    <label class="icon ion-ios7-person"></label>
                     <input type="range" ng-model='people' name="people" min="1" max="15" value="2">
-                    <i class="icon ion-ios7-people-outline"></i>
+                    <label class="icon ion-ios7-people"></label>
                 </div>
             </div>
             <div class="col col-10" >
@@ -27,9 +26,8 @@
                 <label ng-click="reset()" class="button icon ion-ios7-refresh-empty"></label>
             </div>
             <div class="col col-10">
-                <label ng-click="setUp()" class="button icon ion-gear-a"></label>
+                <label ng-click="openModal()" class="button icon ion-gear-a"></label>
             </div>
         </div>
-
     </ion-content>
 

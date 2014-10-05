@@ -1,13 +1,40 @@
-angular.module('timeIsMoney').controller('HomeCtrl', function($scope, $rootScope, $q, $state,$interval) {
+angular.module('timeIsMoney')
+    .controller('HomeCtrl', function($scope, $rootScope, $q, $ionicModal, $state, $interval) {
 
-    var delta = $scope.time = 1;
-    //var realTimeToAdd = $scope.time;
+    // Load the modal from the given template URL
+    //$ionicModal.fromTemplateUrl('../www/templates/settings.html', function($ionicModal) {
+        $ionicModal.fromTemplateUrl('../templates/settings.html', function($ionicModal) {
+        $scope.modal = $ionicModal;
+    }, {
+        // Use our scope for the scope of the modal to keep it simple
+        scope: $scope,
+        // The animation we want to use for the modal entrance
+        animation: 'slide-in-up'
+    });
+
     var stop;
-    $scope.Counting = false;
+    var delta = 1;
     var people;
-    //var delta = 1;
 
     $scope.people = 2;
+    $scope.averageRetribution = 400;
+    $scope.Counting = false;
+    $scope.time = 0;
+    $scope.cycle = "Hour";
+    $scope.currency = "€";
+
+    $scope.currencyValues = [
+        { text: "$", value: "$" },
+        { text: "€", value: "€" },
+        { text: "£", value: "£" },
+        { text: "元", value: "元" }
+    ];
+    $scope.cycleValues = [
+        { text: "Hour", value: "3600000" },
+        { text: "Day", value: "28800000" },
+        { text: "Month", value: "576000000" },
+        { text: "Year", value: "6912000000" }
+    ];
 
     $scope.start = function () {
         if ( angular.isDefined(stop) ) return;
@@ -18,10 +45,10 @@ angular.module('timeIsMoney').controller('HomeCtrl', function($scope, $rootScope
         stop = $interval(function() {
             people = $scope.people;
             //People * Avergae salary * DeltaIncerement (Time fraction)
-            delta = delta + (people * (75 / 3600000));
+            delta = delta + ((people * $scope.averageRetribution) / 3600000);
 
             $scope.time = delta.toString().substring(0,5);
-        }, 10);
+        }, 1);
     };
 
     $scope.pause = function () {
@@ -36,8 +63,30 @@ angular.module('timeIsMoney').controller('HomeCtrl', function($scope, $rootScope
 
     $scope.reset = function () {
 
-        delta = $scope.time = 1;
+        $scope.time = 0;
+        delta = 1;
         people = $scope.people;
     };
+
+    // Modal functions
+
+    $scope.openModal = function() {
+        $scope.modal.show();
+    };
+    $scope.closeModal = function() {
+        $scope.modal.hide();
+    };
+    //Cleanup the modal when we're done with it!
+    $scope.$on('$destroy', function() {
+        $scope.modal.remove();
+    });
+    // Execute action on hide modal
+    $scope.$on('modal.hidden', function() {
+        // Execute action
+    });
+    // Execute action on remove modal
+    $scope.$on('modal.removed', function() {
+        // Execute action
+    });
 
 });

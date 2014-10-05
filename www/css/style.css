@@ -9,8 +9,10 @@ h1, span, label
     -moz-box-shadow:    0px 0px 10px 0px rgba(256, 256, 256, 0.75);
     box-shadow:         0px 0px 10px 0px rgba(256, 256, 256, 0.75);
     /*background-color: #639DBC;*/
-    background-color: #0050EF;
+    /*background-color: #0050EF;*/
+    /*background-color: #78BE5F;*/
+
     margin: 30px;
-    /*border: 1px;
-    border-color: blue;*/
+    border: 1px;
+    border-color: #3F607F;
 }

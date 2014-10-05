@@ -1,0 +1,42 @@
+<ion-modal-view>
+        <content padding="true" >
+            <div class="row " >
+                <div class="col">
+                    <label class="list card">
+                    <input class="h2"
+                           type="number"
+                           ng-model="averageRetribution"
+                           value="averageRetribution">
+                    </label>
+                </div>
+                <div class="col">
+
+                    <ion-radio ng-repeat="itemCurrency in currencyValues"
+                               ng-value="itemCurrency.value"
+                               ng-model="currency"
+                               name="currencies">
+
+                     <h2 class="button-positive">{{ itemCurrency.text }}</h2>
+
+                    </ion-radio>
+                </div>
+                <div class="col">
+                    <ion-radio ng-repeat="itemCycle in cycleValues"
+                               ng-value="itemCycle.value"
+                               ng-model="cycle"
+                               name="cycles">
+
+                        <h2 class="button-positive">{{ itemCycle.text }}</h2>
+                    </ion-radio>
+                </div>
+            </div>
+            <div class="row bar-footer">
+                <div class="col" align= "center">
+                    <div class="button button-positive"
+                         ng-click="modal.hide()">
+                        Done
+                    </div>
+                </div>
+            </div>
+        </content>
+</ion-modal-view>
