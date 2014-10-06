@@ -14,6 +14,7 @@
                     <ion-radio ng-repeat="itemCurrency in currencyValues"
                                ng-value="itemCurrency.value"
                                ng-model="currency"
+                               ng-change="currencyChange(itemCurrency)"
                                name="currencies">
 
                      <h2 class="button-positive">{{ itemCurrency.text }}</h2>
@@ -24,6 +25,7 @@
                     <ion-radio ng-repeat="itemCycle in cycleValues"
                                ng-value="itemCycle.value"
                                ng-model="cycle"
+                               ng-change="cycleChange(itemCycle)"
                                name="cycles">
 
                         <h2 class="button-positive">{{ itemCycle.text }}</h2>

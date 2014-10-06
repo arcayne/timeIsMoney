@@ -2,8 +2,8 @@ angular.module('timeIsMoney')
     .controller('HomeCtrl', function($scope, $rootScope, $q, $ionicModal, $state, $interval) {
 
     // Load the modal from the given template URL
-    //$ionicModal.fromTemplateUrl('../www/templates/settings.html', function($ionicModal) {
-        $ionicModal.fromTemplateUrl('../templates/settings.html', function($ionicModal) {
+    $ionicModal.fromTemplateUrl('../www/templates/settings.html', function($ionicModal) {
+    //    $ionicModal.fromTemplateUrl('../templates/settings.html', function($ionicModal) {
         $scope.modal = $ionicModal;
     }, {
         // Use our scope for the scope of the modal to keep it simple
@@ -20,7 +20,8 @@ angular.module('timeIsMoney')
     $scope.averageRetribution = 400;
     $scope.Counting = false;
     $scope.time = 0;
-    $scope.cycle = "Hour";
+    $scope.cycle = "28800000";
+    $scope.cycleValue = 28800000; // hourly rate by default 3600000 milliseconds and hour.
     $scope.currency = "€";
 
     $scope.currencyValues = [
@@ -45,7 +46,7 @@ angular.module('timeIsMoney')
         stop = $interval(function() {
             people = $scope.people;
             //People * Avergae salary * DeltaIncerement (Time fraction)
-            delta = delta + ((people * $scope.averageRetribution) / 3600000);
+            delta = delta + ((people * $scope.averageRetribution) / $scope.cycleValue);
 
             $scope.time = delta.toString().substring(0,5);
         }, 1);
@@ -66,6 +67,15 @@ angular.module('timeIsMoney')
         $scope.time = 0;
         delta = 1;
         people = $scope.people;
+    };
+
+    $scope.currencyChange = function(item) {
+        $scope.currency = item.value;
+    };
+
+    $scope.cycleChange = function(item) {
+        $scope.cycle = item.text;
+        $scope.cycleValue = item.value;
     };
 
     // Modal functions
