@@ -13,7 +13,7 @@ angular.module('timeIsMoney')
     });
 
     var stop;
-    var delta = 1;
+    var delta = 0;
     var people;
 
     $scope.people = 2;
