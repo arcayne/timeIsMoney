@@ -1,33 +1,30 @@
-    <ion-content ng-controller="HomeCtrl" >
-        <div class="row row-top" >
-            <div class="col" id="money">
-                <section align="center">
-                    <h1> {{time}} {{currency}}</h1>
-                </section>
-            </div>
-        </div>
-        <div class="row bar-footer">
-            <div class="list col">
+<div ng-controller="HomeCtrl" >
+    <div class="bar bar-header bar-dark">
+        <h1 class="title">Time is Money</h1>
+    </div>
 
-                <div class="range">
-                    <label class="icon ion-ios7-person"></label>
-                    <input type="range" ng-model='people' name="people" min="1" max="15" value="2">
-                    <label class="icon ion-ios7-people"></label>
-                </div>
-            </div>
-            <div class="col col-10" >
-                <label align="center"> {{people}} </label>
-            </div>
-            <div class="col col-10">
-                <label ng-click="start()" ng-hide="Counting" class="button icon ion-ios7-play-outline"></label>
-                <label ng-click="pause()" ng-show="Counting" class="button icon ion-ios7-pause-outline"></label>
-            </div>
-            <div class="col col-10">
-                <label ng-click="reset()" class="button icon ion-ios7-refresh-empty"></label>
-            </div>
-            <div class="col col-10">
-                <label ng-click="openModal()" class="button icon ion-gear-a"></label>
-            </div>
-        </div>
-    </ion-content>
 
+    <div class="content has-header padding" id="money">
+        <section>
+            <h1> {{time}} {{currency}}</h1>
+        </section>
+
+    </div>
+
+    <ion-footer-bar class="bar-dark bar-assertive">
+        <div class="range">
+            <label class="icon ion-ios7-person"></label>
+            <input type="range" ng-model='people' name="people" min="1" max="15" value="2">
+            <label class="icon ion-ios7-people"></label>
+        </div>
+        <div class="col" >
+            <label align="center"> {{people}} </label>
+        </div>
+        <div class="buttons" >
+            <label ng-click="start()" ng-hide="Counting" class="button icon ion-ios7-play-outline"></label>
+            <label ng-click="pause()" ng-show="Counting" class="button icon ion-ios7-pause-outline"></label>
+            <label ng-click="reset()" class="button icon ion-ios7-refresh-empty"></label>
+            <label ng-click="openModal()" class="button icon ion-gear-a"></label>
+        </div>
+    </ion-footer-bar>
+</div>
