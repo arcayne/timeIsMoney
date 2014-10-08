@@ -17,7 +17,7 @@ angular.module('timeIsMoney')
     var people;
 
     $scope.people = 2;
-    $scope.averageRetribution = 400;
+    $scope.averageRetribution = 600;
     $scope.Counting = false;
     $scope.time = 0;
     $scope.cycle = "28800000";
@@ -65,7 +65,7 @@ angular.module('timeIsMoney')
     $scope.reset = function () {
 
         $scope.time = 0;
-        delta = 1;
+        delta = 0;
         people = $scope.people;
     };
 
