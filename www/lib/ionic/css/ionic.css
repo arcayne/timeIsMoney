@@ -2846,7 +2846,7 @@ a.subdued {
       background-image: linear-gradient(180deg, #552bdf, #552bdf 50%, transparent 50%); }
   .bar.bar-dark {
     border-color: #111;
-    background-color: #111;
+    background-color: #444444;
     background-image: linear-gradient(0deg, #111, #111 50%, transparent 50%);
     color: #fff; }
     .bar.bar-dark .title {
@@ -2883,10 +2883,10 @@ a.subdued {
     font-size: 13px;
     line-height: 32px; }
     .bar .button.button-icon:before, .bar .button .icon:before, .bar .button.icon:before, .bar .button.icon-left:before, .bar .button.icon-right:before {
-      padding-right: 5px;
-      padding-left: 5px;
-      font-size: 100px;
-      line-height: 0px; }
+      padding-right: 2px;
+      padding-left: 2px;
+      font-size: 20px;
+      line-height: 32px; }
     .bar .button.button-icon {
       font-size: 17px; }
       .bar .button.button-icon .icon:before, .bar .button.button-icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before {
@@ -2911,8 +2911,8 @@ a.subdued {
     .bar .button.back-button.active, .bar .button.back-button.activated {
       opacity: 1; }
   .bar .button-bar > .button, .bar .buttons > .button {
-    min-height: 110px;
-    line-height: 0px; }
+    min-height: 31px;
+    line-height: 32px; }
   .bar .button-bar + .button, .bar .button + .button-bar {
     margin-left: 5px; }
   .bar .buttons, .bar .buttons.left-buttons, .bar .buttons.right-buttons {
@@ -3095,7 +3095,7 @@ a.subdued {
 
 .bar-dark .button {
   border-color: #111;
-  background-color: #111;
+  background-color: #444444;
   color: #fff; }
   .bar-dark .button:hover {
     color: #fff;
