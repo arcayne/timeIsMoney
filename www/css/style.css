@@ -33,6 +33,24 @@ background-color: transparent;
     h1{
         font-size: 8em;
     }
+    #TIMfooter{
+        height:auto;
+        background-color: black;
+    }
+    #TIMbuttons{
+        height:70px;
+    }
+    #TIMbutton{
+        background-color: black;
+        border-color: white; //only for debugging purposes, remove on final version.
+    }
+    #TIMbutton::before{
+        font-size: 60px;
+        padding-top:20px;
+    }
+    #TIMbutton::after{
+        font-size: 60px;
+    }
 }
  
 @media all and (max-width: 599px) and (min-width: 320px) {
