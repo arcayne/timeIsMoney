@@ -23,39 +23,86 @@ background-color: transparent;
     vertical-align: middle;
 }
 
+/*Tablets*/
 @media all and (min-width: 960px) {
     h1{
         font-size: 10em;
     }
+    #TIM-Header{
+        background-color: black;
+    }
+    #TIM-Footer{
+        height:auto;
+        background-color: black;
+    }
+    #TIM-AllButtons{
+        height:70px;
+    }
+    #TIM-Button{
+        background-color: black;
+        //border-color: white; /*only for debugging purposes, remove on final version.*/
+    }
+    #TIM-Button::before{
+        font-size: 60px;
+        padding-top:20px;
+    }
+    #TIM-Button::after{
+        font-size: 60px;
+    }
 }
- 
+
+/*Big screen smartphones*/
 @media all and (max-width: 959px) and (min-width: 600px) {
     h1{
         font-size: 8em;
     }
-    #TIMfooter{
+    #TIM-Header{
+        background-color: black;
+    }
+    #TIM-Footer{
         height:auto;
         background-color: black;
     }
-    #TIMbuttons{
+    #TIM-AllButtons{
         height:70px;
     }
-    #TIMbutton{
+    #TIM-Button{
         background-color: black;
-        border-color: white; //only for debugging purposes, remove on final version.
+        //border-color: white; //only for debugging purposes, remove on final version.
     }
-    #TIMbutton::before{
+    #TIM-Button::before{
         font-size: 60px;
         padding-top:20px;
     }
-    #TIMbutton::after{
+    #TIM-Button::after{
         font-size: 60px;
     }
 }
- 
+
+/*Small screen smartphones*/
 @media all and (max-width: 599px) and (min-width: 320px) {
     h1{
         font-size: 6em;
     }
- 
+    #TIM-Header{
+        background-color: black;
+    }
+    #TIM-Footer{
+        height:auto;
+        background-color: black;
+    }
+    #TIM-AllButtons{
+        height:70px;
+    }
+    #TIM-Button{
+        background-color: black;
+        //border-color: white; //only for debugging purposes, remove on final version.
+    }
+    #TIM-Button::before{
+        font-size: 60px;
+        padding-top:20px;
+    }
+    #TIM-Button::after{
+        font-size: 60px;
+    }
 }
