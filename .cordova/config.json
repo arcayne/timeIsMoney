@@ -1,0 +1,9 @@
+{
+    "lib": {
+        "www": {
+            "id": "com.phonegap.TimeIsMoney",
+            "version": "Beta",
+            "uri": "https://github.com/arcayne/timeIsMoney"
+        }
+    }
+}

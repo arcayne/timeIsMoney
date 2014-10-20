@@ -2552,7 +2552,7 @@ h4, .h4, h5, .h5, h6, .h6 {
   margin-bottom: 10px; }
 
 h1, .h1 {
-  font-size: 155px; }
+  font-size: 36px; }
 
 h2, .h2 {
   font-size: 30px; }
@@ -7350,7 +7350,7 @@ $ios-transition-box-shadow-end: -200px 0px 200px rgba(0,0,0,0.15), -5px 0px 5px 
 /* across the grid. However, you can specify individual */
 /* columns to take up a certain size of the available area */
 .col-10 {
-  -webkit-box-flex: 0;
+  -webkit-box-flex: 2;
   -webkit-flex: 0 0 10%;
   -moz-box-flex: 0;
   -moz-flex: 0 0 10%;

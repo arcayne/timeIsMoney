@@ -4,13 +4,13 @@
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
         xmlns:gap	= "http://phonegap.com/ns/1.0"
         id="com.treeangular.timeismoney"
-        version="0.1.1"
-        versionCode = "1">
+        version="0.1.2"
+        versionCode = "2">
 
   <name>Time Is Money</name>
   <description>Time is money, focus on delivering value.</description>
   <author email="arcayne@gmail.com" href="">
-      Ionic Framework Team
+      Ferran y Joan
     </author>
 
   <content src="index.html"/>
@@ -24,7 +24,11 @@
   <preference name="Orientation" value="landscape" />
 
     <feature name="StatusBar">
-    <param name="ios-package" value="CDVStatusBar" onload="true"/>
-  </feature>
+        <param name="ios-package" value="CDVStatusBar" onload="true"/>
+    </feature>
+    <feature name="Insomnia">
+        <param name="android-package" value="nl.xservices.plugins.Insomnia" />
+    </feature>
+    <gap:plugin name="nl.x-services.plugins.insomnia" version="4.0.0" />
 </widget>
 
