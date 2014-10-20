@@ -15,6 +15,7 @@ background-color: transparent;
     margin: 30px;
     border: 1px;
     border-color: #3F607F;
+    border-radius: 75px;
     
 }
 #money > section
@@ -58,17 +59,19 @@ background-color: transparent;
     }
     #TIM-Header{
         background-color: black;
+        border-color: black;
     }
     #TIM-Footer{
         height:auto;
         background-color: black;
+        border-color: black;
     }
     #TIM-AllButtons{
         height:70px;
     }
     #TIM-Button{
         background-color: black;
-        //border-color: white; //only for debugging purposes, remove on final version.
+        border-color: black; //only for debugging purposes, remove on final version.
     }
     #TIM-Button::before{
         font-size: 60px;
