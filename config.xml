@@ -24,7 +24,11 @@
   <preference name="Orientation" value="landscape" />
 
     <feature name="StatusBar">
-    <param name="ios-package" value="CDVStatusBar" onload="true"/>
-  </feature>
+        <param name="ios-package" value="CDVStatusBar" onload="true"/>
+    </feature>
+    <feature name="Insomnia">
+        <param name="android-package" value="nl.xservices.plugins.Insomnia" />
+    </feature>
+    <gap:plugin name="nl.x-services.plugins.insomnia" version="4.0.0" />
 </widget>
 

@@ -21,8 +21,8 @@
             <label align="center"> {{people}} </label>
         </div>
         <div id="TIM-AllButtons" class="buttons" >
-            <label id= "TIM-Button" ng-click="start()" ng-hide="Counting" class="button icon ion-arrow-right-b"></label>
-            <label id= "TIM-Button" ng-click="pause()" ng-show="Counting" class="button icon ion-pause"></label>
+            <label id= "TIM-Button" ng-click="start()" ng-hide="Counting" class="button icon ion-arrow-right-b" onclick="window.plugins.insomnia.keepAwake()"></label>
+            <label id= "TIM-Button" ng-click="pause()" ng-show="Counting" class="button icon ion-pause" onclick="window.plugins.insomnia.allowSleepAgain()"></label>
             <label id= "TIM-Button" ng-click="reset()" class="button icon ion-loop"></label>
             <label id= "TIM-Button" ng-click="openModal()" class="button icon ion-gear-a"></label>
         </div>
