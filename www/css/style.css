@@ -15,7 +15,7 @@ background-color: transparent;
     margin: 30px;
     border: 1px;
     border-color: #3F607F;
-    border-radius: 75px;
+    border-radius: 150px;
     
 }
 #money > section
@@ -27,28 +27,41 @@ background-color: transparent;
 /*Tablets*/
 @media all and (min-width: 960px) {
     h1{
-        font-size: 10em;
+        font-size: 15em;
     }
     #TIM-Header{
         background-color: black;
+        border-color: white;
+        height: 100px;
+    }
+    #TIM-Banner{
+        background-color: grey;
+        border-color: white;
+        height: 100px;
+        padding-top: 30px;
+    }
+    #money{
+        margin-top: 150px;
+
     }
     #TIM-Footer{
         height:auto;
         background-color: black;
+        border-color: none;
     }
     #TIM-AllButtons{
-        height:70px;
+        height:100px;
     }
     #TIM-Button{
         background-color: black;
-        //border-color: white; /*only for debugging purposes, remove on final version.*/
+        border-color: black; //only for debugging purposes, remove on final version.
     }
     #TIM-Button::before{
-        font-size: 60px;
-        padding-top:20px;
+        font-size: 100px;
+        padding-top:30px;
     }
     #TIM-Button::after{
-        font-size: 60px;
+        font-size: 100px;
     }
 }
 
