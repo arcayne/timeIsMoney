@@ -1,23 +1,29 @@
 angular.module('timeIsMoney')
-    .controller('HomeCtrl', function($scope, $rootScope, $q, $ionicModal, $state, $interval) {
-
-    // Load the modal from the given template URL
-    $ionicModal.fromTemplateUrl('../www/templates/settings.html', function($ionicModal) {
-    //    $ionicModal.fromTemplateUrl('../templates/settings.html', function($ionicModal) {
-        $scope.modal = $ionicModal;
-    }, {
-        // Use our scope for the scope of the modal to keep it simple
-        scope: $scope,
-        // The animation we want to use for the modal entrance
-        animation: 'slide-in-up'
-    });
+    .controller('HomeCtrl',                 
+        function($scope, $rootScope, $q, $ionicModal, $state, $interval) {
+            // Load the modal from the given template URL
+            //$ionicModal.fromTemplateUrl('../www/templates/settings.html', function($ionicModal) {
+    
+      $ionicModal.fromTemplateUrl('../templates/settings.html', function(settingsModel) {
+            $scope.modal = settingsModel;
+        }, 
+        {
+            // Use our scope for the scope of the modal to keep it simple
+            scope: $scope, //dataModal
+            // The animation we want to use for the modal entrance
+            animation: 'slide-in-up'
+        });
+    
+    $scope.popo = {
+        averageRetribution: 600
+    };
 
     var stop;
     var delta = 0;
     var people;
 
     $scope.people = 2;
-    $scope.averageRetribution = 600;
+
     $scope.Counting = false;
     $scope.time = 0;
     $scope.cycle = "28800000";
@@ -46,7 +52,7 @@ angular.module('timeIsMoney')
         stop = $interval(function() {
             people = $scope.people;
             //People * Avergae salary * DeltaIncerement (Time fraction)
-            delta = delta + ((people * $scope.averageRetribution) / $scope.cycleValue);
+            delta = delta + ((people * $scope.popo.averageRetribution) / $scope.cycleValue);
 
             $scope.time = delta.toString().substring(0,5);
         }, 1);
@@ -91,8 +97,8 @@ angular.module('timeIsMoney')
         $scope.modal.remove();
     });
     // Execute action on hide modal
-    $scope.$on('modal.hidden', function() {
-        // Execute action
+    $scope.$on('modal.hidden', function(data) {
+        
     });
     // Execute action on remove modal
     $scope.$on('modal.removed', function() {

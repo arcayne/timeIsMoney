@@ -3,12 +3,10 @@
         <h1 class="title">Time is Money</h1>
     </div>
 
-
     <div class="content has-header padding" id="money">
         <section>
             <h1> {{time}} {{currency}}</h1>
         </section>
-
     </div>
 
     <ion-footer-bar id="TIM-Footer" class="bar-dark bar-assertive">
@@ -18,8 +16,16 @@
             <label class="icon ion-ios7-people"></label>
         </div>
         <div class="col" >
-            <label align="center"> {{people}} </label>
+            <label align="center"> {{people}} </label>            
         </div>
+        <div class="col" >
+            <label align="center"> {{popo.averageRetribution}} </label>
+            
+        </div>
+        <div class="col" >
+            <label align="center"> {{scope.averageRetribution}} {{$scope.currency}}</label>
+        </div>
+        
         <div id="TIM-AllButtons" class="buttons" >
             <label id= "TIM-Button" ng-click="start()" ng-hide="Counting" class="button icon ion-arrow-right-b" onclick="window.plugins.insomnia.keepAwake()"></label>
             <label id= "TIM-Button" ng-click="pause()" ng-show="Counting" class="button icon ion-pause" onclick="window.plugins.insomnia.allowSleepAgain()"></label>
