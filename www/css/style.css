@@ -29,6 +29,10 @@ background-color: transparent;
     h1{
         font-size: 15em;
     }
+    #TIM-Canvas{
+        height: 100%;
+        width: 100%;
+    }
     #TIM-Header{
         background-color: black;
         border-color: white;
@@ -41,8 +45,9 @@ background-color: transparent;
         padding-top: 30px;
     }
     #money{
-        margin-top: 150px;
-
+        position: relative;
+        top: 45%;
+        transform: translateY(-50%);
     }
     #TIM-Footer{
         height:auto;
