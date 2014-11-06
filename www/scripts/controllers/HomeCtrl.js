@@ -2,10 +2,11 @@ angular.module('timeIsMoney')
     .controller('HomeCtrl',                 
         function($scope, $rootScope, $q, $ionicModal, $state, $interval) {
             // Load the modal from the given template URL
-            //$ionicModal.fromTemplateUrl('../www/templates/settings.html', function($ionicModal) {
+            $ionicModal.fromTemplateUrl('../www/templates/settings.html', function($ionicModal) {
+                $scope.modal = $ionicModal;
     
-      $ionicModal.fromTemplateUrl('../templates/settings.html', function(settingsModel) {
-            $scope.modal = settingsModel;
+      //$ionicModal.fromTemplateUrl('../templates/settings.html', function(settingsModel) {
+            //$scope.modal = settingsModel;
         }, 
         {
             // Use our scope for the scope of the modal to keep it simple
