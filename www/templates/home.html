@@ -10,20 +10,17 @@
     </div>
 
     <ion-footer-bar id="TIM-Footer" class="bar-dark bar-assertive">
-        <div class="range">
+        <div id="TIM-NumberOfPeople-Slider" class="range">
             <label class="icon ion-ios7-person"></label>
             <input type="range" ng-model='people' name="people" min="1" max="15" value="2">
             <label class="icon ion-ios7-people"></label>
         </div>
-        <div class="col" >
+        <div id="TIM-NumberOfPeople-Number" class="col" >
             <label align="center"> {{people}} </label>            
         </div>
-        <div class="col" >
+        <div id="TIM-AverageRetributionInfo" class="col" >
             <label align="center"> {{popo.averageRetribution}} {{currency}} / person </label>
             
-        </div>
-        <div class="col" >
-            <label align="center"> {{scope.averageRetribution}} {{$scope.currency}}</label>
         </div>
         
         <div id="TIM-AllButtons" class="buttons" >

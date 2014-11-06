@@ -1,8 +1,29 @@
+/*Common configurations*/
 h1, span, label
 {
     color: #fff;
 }
 
+#TIM-Canvas{
+    height: 100%;
+    width: 100%;
+}
+#TIM-Header{
+    background-color: black;
+    border-color: black; /*use white to debug*/
+}
+#TIM-Banner{
+    background-color: grey;
+    border-color: white;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+#money{
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
 #money h1
 {
     -webkit-box-shadow: 0px 0px 10px 0px rgba(256, 256, 256, 0.75);
@@ -23,108 +44,90 @@ background-color: transparent;
     text-align: center;
     vertical-align: middle;
 }
+#TIM-Footer{
+    background-color: black;
+    border-color: black; /*Use white for debugging*/
+}
+#TIM-NumberOfPeople-Slider{
+    width: 40%;
+}
+#TIM-NumberOfPeople-Number{
+    /*width: 10%;*/
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+}
+#TIM-AverageRetributionInfo{
+    /*width: 20%;*/
+}
+#TIM-AllButtons{
+    /*width:30%;*/
+}
+#TIM-Button{
+    background-color: black;
+    border-color: black; /*Use white for debugging*/
+}
+/*End of Common configurations*/
 
 /*Tablets*/
 @media all and (min-width: 960px) {
     h1{
         font-size: 15em;
     }
-    #TIM-Canvas{
-        height: 100%;
-        width: 100%;
-    }
     #TIM-Header{
-        background-color: black;
-        border-color: white;
-        height: 100px;
-    }
-    #TIM-Banner{
-        background-color: grey;
-        border-color: white;
-        height: 100px;
-        padding-top: 30px;
-    }
-    #money{
-        position: relative;
-        top: 45%;
-        transform: translateY(-50%);
+        height: 8em;
     }
     #TIM-Footer{
-        height:auto;
-        background-color: black;
-        border-color: none;
+        height:8em;
     }
     #TIM-AllButtons{
-        height:100px;
-    }
-    #TIM-Button{
-        background-color: black;
-        border-color: black; //only for debugging purposes, remove on final version.
+        height:8em;
     }
     #TIM-Button::before{
-        font-size: 100px;
-        padding-top:30px;
+        font-size: 8em;
+        padding-top:0.3em;
     }
-    #TIM-Button::after{
-        font-size: 100px;
-    }
-}
 
+}
+/*End of Tablets*/
 /*Big screen smartphones*/
 @media all and (max-width: 959px) and (min-width: 600px) {
     h1{
         font-size: 8em;
     }
     #TIM-Header{
-        background-color: black;
-        border-color: black;
+        height: 6em;
     }
     #TIM-Footer{
-        height:auto;
-        background-color: black;
-        border-color: black;
+        height:6em;
     }
     #TIM-AllButtons{
-        height:70px;
-    }
-    #TIM-Button{
-        background-color: black;
-        border-color: black; //only for debugging purposes, remove on final version.
+        height:6em;
     }
     #TIM-Button::before{
-        font-size: 60px;
-        padding-top:20px;
-    }
-    #TIM-Button::after{
-        font-size: 60px;
+        font-size: 6em;
+        padding-top:0.2em;
     }
  /*play f10a - pause f210*/
 }
-
+/*End of Big screen smartphones*/
 /*Small screen smartphones*/
 @media all and (max-width: 599px) and (min-width: 320px) {
     h1{
-        font-size: 6em;
+        font-size: 7em;
     }
     #TIM-Header{
-        background-color: black;
+        height: 5em;
     }
     #TIM-Footer{
-        height:auto;
-        background-color: black;
+        height:5em;
     }
     #TIM-AllButtons{
-        height:70px;
-    }
-    #TIM-Button{
-        background-color: black;
-        //border-color: white; //only for debugging purposes, remove on final version.
+        height:5em;
     }
     #TIM-Button::before{
-        font-size: 60px;
-        padding-top:20px;
-    }
-    #TIM-Button::after{
-        font-size: 60px;
+        font-size: 5em;
+        padding-top:0.2em;
     }
 }
+/*End of Small screen smartphones*/
