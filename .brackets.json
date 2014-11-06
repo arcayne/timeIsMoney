@@ -1,5 +1,6 @@
 {
     "jscodehints.detectedExclusions": [
-        "C:/Development/Github/timeIsMoney/platforms/android/assets/www/lib/ionic/js/angular-ui/angular-ui-router.min.js"
+        "C:/Development/Github/timeIsMoney/platforms/android/assets/www/lib/ionic/js/angular-ui/angular-ui-router.min.js",
+        "C:/Development/Github/FerranFork/timeIsMoney/platforms/android/assets/www/lib/ionic/js/ionic.min.js"
     ]
 }
