@@ -4,8 +4,8 @@
         xmlns:cdv="http://cordova.apache.org/ns/1.0"
         xmlns:gap	= "http://phonegap.com/ns/1.0"
         id="com.treeangular.timeismoney"
-        version="0.1.2"
-        versionCode = "2">
+        version="0.1.5"
+        versionCode = "9">
 
   <name>Time Is Money</name>
   <description>Time is money, focus on delivering value.</description>
