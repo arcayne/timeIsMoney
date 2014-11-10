@@ -42,19 +42,19 @@ angular.module('timeIsMoney')
         { text: "Year", value: "691200000" }
     ];
 
-    $scope.$watch($scope.people, function (value) {
+    $scope.$watch('people', function (value) {
         //Calculate new delta to add
         deltaToAdd = ($scope.people * $scope.popo.averageRetribution) / $scope.cycleValue;
 
     }, true);
 
-    $scope.$watch($scope.popo.averageRetribution, function (value) {
+    $scope.$watch('popo.averageRetribution', function (value) {
         //Calculate new delta to add
         deltaToAdd = ($scope.people * $scope.popo.averageRetribution) / $scope.cycleValue;
 
     }, true);
 
-    $scope.$watch($scope.cycleValue, function (value) {
+    $scope.$watch('cycleValue', function (value) {
         //Calculate new delta to add
         deltaToAdd = ($scope.people * $scope.popo.averageRetribution) / $scope.cycleValue;
 
