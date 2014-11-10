@@ -1,12 +1,13 @@
 /*Common configurations*/
 h1, span, label
-{
-    color: #fff;
-}
+                            {
+                                color: #fff;
+                            }
 
 #TIM-Canvas{
     height: 100%;
     width: 100%;
+    position: absolute;
 }
 #TIM-Header{
     background-color: black;
@@ -21,8 +22,8 @@ h1, span, label
 }
 #money{
     position: relative;
-    top: 45%;
-    transform: translateY(-50%);
+    top: 40%;
+    -webkit-transform: translateY(-50%);
 }
 #money h1
 {
@@ -32,12 +33,12 @@ h1, span, label
     /*background-color: #639DBC;*/
     /*background-color: #0050EF;*/
     /*background-color: #78BE5F;*/
-background-color: transparent;
+    background-color: transparent;
     margin: 30px;
     border: 1px;
     border-color: #3F607F;
     border-radius: 150px;
-    
+
 }
 #money > section
 {
@@ -55,7 +56,7 @@ background-color: transparent;
     /*width: 10%;*/
     position: relative;
     top: 45%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 #TIM-AverageRetributionInfo{
     /*width: 20%;*/
@@ -102,13 +103,13 @@ background-color: transparent;
         height:6em;
     }
     #TIM-AllButtons{
-        height:6em;
+        height:5em;
     }
     #TIM-Button::before{
         font-size: 6em;
         padding-top:0.2em;
     }
- /*play f10a - pause f210*/
+    /*play f10a - pause f210*/
 }
 /*End of Big screen smartphones*/
 /*Small screen smartphones*/
@@ -131,3 +132,4 @@ background-color: transparent;
     }
 }
 /*End of Small screen smartphones*/
+
