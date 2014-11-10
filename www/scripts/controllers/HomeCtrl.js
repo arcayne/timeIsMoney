@@ -1,12 +1,10 @@
 angular.module('timeIsMoney')
     .controller('HomeCtrl',                 
         function($scope, $rootScope, $q, $ionicModal, $state, $interval) {
-            // Load the modal from the given template URL
-            $ionicModal.fromTemplateUrl('../www/templates/settings.html', function($ionicModal) {
-                $scope.modal = $ionicModal;
-    
-      //$ionicModal.fromTemplateUrl('../templates/settings.html', function(settingsModel) {
-            //$scope.modal = settingsModel;
+      // Load the modal from the given template URL
+      $ionicModal.fromTemplateUrl('../www/templates/settings.html', function($ionicModal) {
+      //$ionicModal.fromTemplateUrl('../templates/settings.html', function($ionicModal) {
+            $scope.modal = $ionicModal;
         }, 
         {
             // Use our scope for the scope of the modal to keep it simple
@@ -21,14 +19,14 @@ angular.module('timeIsMoney')
 
     var stop;
     var delta = 0;
-    var people;
+    var deltaToAdd = 0;
 
     $scope.people = 2;
 
     $scope.Counting = false;
     $scope.time = 0;
-    $scope.cycle = "28800000";
-    $scope.cycleValue = 28800000; // hourly rate by default 3600000 milliseconds and hour.
+    $scope.cycle = "2880000";
+    $scope.cycleValue = 2880000; // hourly rate by default 3600000 milliseconds and hour.
     $scope.currency = "€";
 
     $scope.currencyValues = [
@@ -38,25 +36,41 @@ angular.module('timeIsMoney')
         { text: "元", value: "元" }
     ];
     $scope.cycleValues = [
-        { text: "Hour", value: "3600000" },
-        { text: "Day", value: "28800000" },
-        { text: "Month", value: "576000000" },
-        { text: "Year", value: "6912000000" }
+        { text: "Hour", value: "360000" },
+        { text: "Day", value: "2880000" },
+        { text: "Month", value: "57600000" },
+        { text: "Year", value: "691200000" }
     ];
+
+    $scope.$watch($scope.people, function (value) {
+        //Calculate new delta to add
+        deltaToAdd = ($scope.people * $scope.popo.averageRetribution) / $scope.cycleValue;
+
+    }, true);
+
+    $scope.$watch($scope.popo.averageRetribution, function (value) {
+        //Calculate new delta to add
+        deltaToAdd = ($scope.people * $scope.popo.averageRetribution) / $scope.cycleValue;
+
+    }, true);
+
+    $scope.$watch($scope.cycleValue, function (value) {
+        //Calculate new delta to add
+        deltaToAdd = ($scope.people * $scope.popo.averageRetribution) / $scope.cycleValue;
+
+    }, true);
 
     $scope.start = function () {
         if ( angular.isDefined(stop) ) return;
 
-        people = $scope.people;
         $scope.Counting = true;
 
         stop = $interval(function() {
-            people = $scope.people;
-            //People * Avergae salary * DeltaIncerement (Time fraction)
-            delta = delta + ((people * $scope.popo.averageRetribution) / $scope.cycleValue);
+            //People * Average salary * DeltaIncrement (Time fraction)
+            delta = delta + deltaToAdd;
 
             $scope.time = delta.toString().substring(0,5);
-        }, 1);
+        }, 10);
     };
 
     $scope.pause = function () {
@@ -66,14 +80,12 @@ angular.module('timeIsMoney')
             stop = undefined;
             $scope.Counting = false;
         }
-        people = $scope.people;
     };
 
     $scope.reset = function () {
 
         $scope.time = 0;
         delta = 0;
-        people = $scope.people;
     };
 
     $scope.currencyChange = function(item) {
@@ -86,7 +98,6 @@ angular.module('timeIsMoney')
     };
 
     // Modal functions
-
     $scope.openModal = function() {
         $scope.modal.show();
     };
@@ -105,5 +116,4 @@ angular.module('timeIsMoney')
     $scope.$on('modal.removed', function() {
         // Execute action
     });
-
 });
